@@ -1,0 +1,52 @@
+<!doctype html>
+<title>Tetris Link die</title>
+<style>
+body {
+  font: 100% sans-serif;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  display: block;
+  width: 10em;
+  color: #f8f8f8;
+  background: #4da6ee;
+  padding: 0.5em;
+  margin: 1em auto;
+  border-bottom: 3px solid #268bd2;
+  box-shadow: 0 6px 0 -3px rgba(0,0,0,0.5);
+  position: relative;
+  cursor: pointer;
+}
+a:hover {
+  top: -1px;
+  box-shadow: 0 7px 0 -3px rgba(0,0,0,0.5);
+}
+a:active {
+  top: 1px;
+  box-shadow: 0 5px 0 -3px rgba(0,0,0,0.5);
+}
+</style>
+
+<img id=die src=http://i.imgur.com/7he35cB.png>
+<a onclick=rolldie()>Roll Die</a>
+<p id=test>
+
+<script> // http://imgur.com/a/zwuO1
+var test = document.getElementById('test');
+var images = [
+  'http://i.imgur.com/wrplLJe.gif',
+  'http://i.imgur.com/zgmmYwu.gif',
+  'http://i.imgur.com/UnabHyo.gif',
+  'http://i.imgur.com/M1MtVay.gif',
+  'http://i.imgur.com/JzMRTLv.gif',
+  'http://i.imgur.com/poZWkAl.gif',
+  'http://i.imgur.com/7he35cB.png'
+];
+
+function rolldie(){
+  var n = ~~(Math.random() * images.length);
+  test.innerHTML = n;
+  document.images['die'].src = images[n];
+}
+</script>
