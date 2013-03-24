@@ -30,7 +30,7 @@ a:active {
 
 <img id=die src=link.png>
 <a onclick=rolldie()>Roll Die</a>
-<p id=test>
+<h1 id=test></h1>
 
 <script> // http://imgur.com/a/zwuO1
 var test = document.getElementById('test');
@@ -42,10 +42,18 @@ var images = [
   'o.png',
   'i.png'
 ];
+var words = [
+  'TETRIS LINK',
+  'GUN',
+  'TREE',
+  'SNAKE',
+  'BOX',
+  'STICK'
+];
 
 function rolldie(){
   var n = ~~(Math.random() * images.length);
-  test.innerHTML = n;
+  test.innerHTML = words[n];
   document.images['die'].src = images[n];
 }
 </script>
